@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyAppointmentScreenController">
+   <children>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackAction" text="Back" />
+      <Label fx:id="label" layoutX="346.0" layoutY="21.0" minHeight="16" minWidth="69" text="Update Appointment">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="93.0" text="Select an appointment:" />
+      <TableView fx:id="appointmentTable" layoutX="15.0" layoutY="120.0" prefHeight="226.0" prefWidth="500.0">
+         <columns>
+            <TableColumn fx:id="appointmentIdColumn" minWidth="50.0" prefWidth="50.0" text="#" />
+            <TableColumn fx:id="customerNameColumn" minWidth="130.0" prefWidth="130.0" text="Name" />
+            <TableColumn fx:id="appointmentStartColumn" minWidth="160.0" prefWidth="160.0" text="Start" />
+            <TableColumn fx:id="appointmentEndColumn" minWidth="160.0" prefWidth="160.0" text="End" />
+         </columns>
+      </TableView>
+      <Button fx:id="selectAppointmentButton" layoutX="176.0" layoutY="360.0" mnemonicParsing="false" onAction="#selectAppointmentAction" text="Edit Selected Appointment" />
+      <Label layoutX="799.0" layoutY="83.0" text="Updating Appointment #" />
+      <TextField fx:id="appointmentIdField" layoutX="969.0" layoutY="80.0" prefWidth="40.0" />
+      <Label layoutX="549.0" layoutY="123.0" text="Customer" />
+      <TextField fx:id="customerNameField" layoutX="621.0" layoutY="120.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="799.0" layoutY="123.0" text="Contact" />
+      <TextField fx:id="customerContactField" layoutX="859.0" layoutY="120.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="549.0" layoutY="163.0" text="Title" />
+      <TextField fx:id="appointmentTitleField" layoutX="621.0" layoutY="159.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="799.0" layoutY="163.0" text="Type" />
+      <ChoiceBox fx:id="appointmentTypeBox" layoutX="859.0" layoutY="159.0" prefWidth="150.0" />
+      <Label layoutX="549.0" layoutY="203.0" text="Location" />
+      <ChoiceBox fx:id="appointmentLocationBox" layoutX="621.0" layoutY="199.0" prefWidth="150.0" />
+      <Label layoutX="799.0" layoutY="203.0" text="URL" />
+      <TextField fx:id="appointmentUrlField" layoutX="859.0" layoutY="199.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="549.0" layoutY="244.0" text="Date" />
+      <DatePicker fx:id="appointmentDatePicker" layoutX="621.0" layoutY="240.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="549.0" layoutY="284.0" text="Start" />
+      <ComboBox fx:id="appointmentStartBox" layoutX="621.0" layoutY="280.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="549.0" layoutY="324.0" text="End" />
+      <ComboBox fx:id="appointmentEndBox" layoutX="621.0" layoutY="320.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="859.0" layoutY="244.0" text="Description" />
+      <TextArea fx:id="appointmentDescriptionArea" layoutX="799.0" layoutY="280.0" prefHeight="71.0" prefWidth="210.0" />
+      <Button fx:id="updateAppointmentButton" layoutX="621.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleUpdateAppointmentAction" text="Update" />
+      <Button fx:id="deleteAppointmentButton" layoutX="946.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleDeleteAppointmentAction" text="Delete" />
+   </children>
+</AnchorPane>

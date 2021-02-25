@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddAppointmentScreenController">
+   <children>
+      <Label fx:id="label" layoutX="205.0" layoutY="21.0" minHeight="16" minWidth="69" text="Create Appointment">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackAction" text="Back" />
+      <Label layoutX="14.0" layoutY="80.0" text="Select a customer:" />
+      <TableView fx:id="customerTable" layoutX="14.0" layoutY="106.0" prefHeight="226.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="customerNameColumn" minWidth="200.0" prefWidth="200.0" text="Name" />
+        </columns>
+      </TableView>
+      <Button fx:id="selectCustomerButton" layoutX="52.0" layoutY="346.0" mnemonicParsing="false" onAction="#selectCustomerAction" text="Select Customer" />
+      <Label layoutX="240.0" layoutY="110.0" text="Customer" />
+      <TextField fx:id="customerNameField" layoutX="312.0" layoutY="106.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="490.0" layoutY="110.0" text="Contact" />
+      <TextField fx:id="customerContactField" layoutX="550.0" layoutY="106.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="240.0" layoutY="149.0" text="Title" />
+      <TextField fx:id="appointmentTitleField" layoutX="312.0" layoutY="145.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="490.0" layoutY="149.0" text="Type" />
+      <ChoiceBox fx:id="appointmentTypeBox" layoutX="550.0" layoutY="145.0" prefWidth="150.0" />
+      <Label layoutX="240.0" layoutY="189.0" text="Location" />
+      <ChoiceBox fx:id="appointmentLocationBox" layoutX="312.0" layoutY="185.0" prefWidth="150.0" />
+      <Label layoutX="490.0" layoutY="189.0" text="URL" />
+      <TextField fx:id="appointmentUrlField" layoutX="550.0" layoutY="185.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="240.0" layoutY="230.0" text="Date" />
+      <DatePicker fx:id="appointmentDatePicker" layoutX="312.0" layoutY="226.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="240.0" layoutY="270.0" text="Start" />
+      <ComboBox fx:id="appointmentStartBox" layoutX="312.0" layoutY="266.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="240.0" layoutY="310.0" text="End" />
+      <ComboBox fx:id="appointmentEndBox" layoutX="312.0" layoutY="306.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="550.0" layoutY="230.0" text="Description" />
+      <TextArea fx:id="appointmentDescriptionArea" layoutX="490.0" layoutY="266.0" prefHeight="71.0" prefWidth="210.0" />
+      <Button fx:id="createAppointmentButton" layoutX="312.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleCreateAppointmentAction" text="Create" />
+      <Button fx:id="resetButton" layoutX="644.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleResetAction" text="Reset" />
+   </children>
+</AnchorPane>
